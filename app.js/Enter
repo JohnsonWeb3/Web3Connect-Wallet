@@ -1,0 +1,17 @@
+// app.js
+async function connectWallet() {
+    if (window.ethereum) {
+        await ethereum.request({ method: "eth_requestAccounts" });
+        console.log("Wallet connected");
+    }
+}
+
+Web3Connect Wallet is a simple Web3 authentication and wallet connection module using MetaMask integration.
+pragma solidity ^0.8.0;
+
+contract Token {
+    string public name = "ForgeToken";
+    string public symbol = "FRG";
+    uint public totalSupply = 1000000;
+    mapping(address => uint) public balanceOf;
+}
